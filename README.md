@@ -1,1 +1,1 @@
-# ElifTece_back_end
+npm run start:dev
