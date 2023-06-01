@@ -10,14 +10,12 @@ const addHistory = async (req, res) => {
 
 const getOrder = async (req, res) => {
   const allOrders = await History.find({});
-  console.log("allOrders: ", allOrders);
   res.json(allOrders);
 };
 
 const getOrderByNumb = async (req, res) => {
   const { phone } = req.params;
   const personalOrders = await History.find({ phone });
-  console.log("personalOrders: ", personalOrders);
   res.json(personalOrders);
 };
 

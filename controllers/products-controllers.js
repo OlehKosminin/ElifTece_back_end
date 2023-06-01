@@ -3,9 +3,7 @@ const { ctrlWrapper } = require("../utils");
 
 const getProduct = async (req, res) => {
   const { shop } = req.params;
-
   const result = await Products.find({ shop });
-  console.log("result: ", result);
   res.json(result);
 };
 
@@ -16,6 +14,6 @@ const getProductById = async (req, res) => {
 };
 
 module.exports = {
-  git add .getProduct: ctrlWrapper(getProduct),
+  getProduct: ctrlWrapper(getProduct),
   getProductById: ctrlWrapper(getProductById),
 };
